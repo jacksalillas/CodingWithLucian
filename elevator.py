@@ -34,7 +34,7 @@ def checkIfHIGHAdjacentExists(theFloor):
 def storeToArray(flr):
     arrayPressedFloors.append(flr)
 
-maxFloors = 10
+maxFloors = 10 #manual, static designation. Up to you.
 maxFloorsDB = generateMaxFloorsArray(10)
 
 while True:
