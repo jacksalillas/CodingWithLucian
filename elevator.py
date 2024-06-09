@@ -1,5 +1,8 @@
 arrayPressedFloors = []
 
+def generateMaxFloorsArray(maxInt):
+    return list(range(1, maxInt+1))
+
 def outputMessage(msg):
     print(msg)
 
@@ -31,8 +34,18 @@ def checkIfHIGHAdjacentExists(theFloor):
 def storeToArray(flr):
     arrayPressedFloors.append(flr)
 
+maxFloors = 10
+maxFloorsDB = generateMaxFloorsArray(10)
+
 while True:
-    pressedFloor = int(input("Enter the desired floor (or type 'exit' to stop): "))
-    if pressedFloor == "exit":
-        break
-    checkIfExists(pressedFloor)
+    try:
+        pressedFloor = input("Enter the desired floor (or type 'exit' to stop): ")
+        if pressedFloor.lower() == "exit":
+            break
+        pressedFloor = int(pressedFloor)  # Convert input to an integer
+        if (pressedFloor > 1) and (pressedFloor <= maxFloors):
+            checkIfExists(pressedFloor)
+        else:
+            print("Invalid floor number. Please enter a valid floor.")
+    except ValueError:
+        print("Invalid input. Please enter a valid floor number or 'exit'.")
