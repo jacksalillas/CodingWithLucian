@@ -35,7 +35,7 @@ def storeToArray(flr):
     arrayPressedFloors.append(flr)
 
 maxFloors = 10 #manual, static designation. Up to you.
-maxFloorsDB = generateMaxFloorsArray(10)
+maxFloorsDB = generateMaxFloorsArray(maxFloors)
 
 while True:
     try:
