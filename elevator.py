@@ -37,6 +37,7 @@ def storeToArray(flr):
 maxFloors = 10 #manual, static designation. Up to you.
 maxFloorsDB = generateMaxFloorsArray(maxFloors)
 
+#this program will run always until you type "exit"
 while True:
     try:
         pressedFloor = input("Enter the desired floor (or type 'exit' to stop): ")
