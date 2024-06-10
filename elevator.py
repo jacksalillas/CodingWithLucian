@@ -40,7 +40,7 @@ maxFloorsDB = generateMaxFloorsArray(maxFloors)
 #this program will run always until you type "exit"
 while True:
     try:
-        pressedFloor = input("Enter the desired floor (or type 'exit' to stop): ")
+        pressedFloor = input("Your building has " + str(maxFloors) + " floors.\nEnter the desired floor (or type 'exit' to stop): ")
         if pressedFloor.lower() == "exit":
             break
         pressedFloor = int(pressedFloor)  # Convert input to an integer
