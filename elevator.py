@@ -44,7 +44,7 @@ while True:
         if pressedFloor.lower() == "exit":
             break
         pressedFloor = int(pressedFloor)  # Convert input to an integer
-        if (pressedFloor > 1) and (pressedFloor <= maxFloors):
+        if (pressedFloor >= 1) and (pressedFloor <= maxFloors):
             checkIfExists(pressedFloor)
         else:
             print("Invalid floor number. Please enter a valid floor.")
