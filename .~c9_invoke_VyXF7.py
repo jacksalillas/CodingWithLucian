@@ -8,7 +8,7 @@ def outputMessage(msg):
 
 def checkIfExists(theFloor):
     if theFloor in arrayPressedFloors:
-        msgPressedAlready = "Floor " + str(theFloor) + " is already pressed!"
+        msgPressedAlready = "This floor is already pressed! Use the stairs!"
         outputMessage(msgPressedAlready)
     else:
         checkIfLOWAdjacentExists(theFloor)
