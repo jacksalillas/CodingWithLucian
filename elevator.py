@@ -8,7 +8,7 @@ def outputMessage(msg):
 
 def checkIfExists(theFloor):
     if theFloor in arrayPressedFloors:
-        msgPressedAlready = "This floor is already pressed! Use the stairs!"
+        msgPressedAlready = "Floor " + str(theFloor) + " is already pressed!"
         outputMessage(msgPressedAlready)
     else:
         checkIfLOWAdjacentExists(theFloor)
@@ -35,15 +35,16 @@ def storeToArray(flr):
     arrayPressedFloors.append(flr)
 
 maxFloors = 10 #manual, static designation. Up to you.
-maxFloorsDB = generateMaxFloorsArray(10)
+maxFloorsDB = generateMaxFloorsArray(maxFloors)
 
+#this program will run always until you type "exit"
 while True:
     try:
-        pressedFloor = input("Enter the desired floor (or type 'exit' to stop): ")
+        pressedFloor = input("Your building has " + str(maxFloors) + " floors.\nEnter the desired floor (or type 'exit' to stop): ")
         if pressedFloor.lower() == "exit":
             break
         pressedFloor = int(pressedFloor)  # Convert input to an integer
-        if (pressedFloor > 1) and (pressedFloor <= maxFloors):
+        if (pressedFloor >= 1) and (pressedFloor <= maxFloors):
             checkIfExists(pressedFloor)
         else:
             print("Invalid floor number. Please enter a valid floor.")
